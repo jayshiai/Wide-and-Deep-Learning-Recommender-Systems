@@ -22,7 +22,8 @@ We will use the insight gained from EDA to clean up the data, transform features
 Common problem faced by Recommender Systems is “Cold-Start”, i.e. when we have insufficient data to make recommendation to user. To resolve this, we will be using Wide and Deep Learning Recommender System.
 
 #### Recommender systems are broadly implemented in two ways:
-<img align="right" src="filtering-infographics.png" />
+<img align="right" src="./images/filtering-infographics.png" />
+
 ### Collaborative Filtering :
 It makes recommendation based on user 	activity and its relation to activity of other users. 	That is it makes recommendation based on user 	similarity and association.  
 
@@ -33,6 +34,8 @@ Content-based filtering uses item features to 	recommend other items similar to 
 The WADL RS method represents a hybrid paradigm, incorporating elements of both Collaborative Filtering and Content-Based Filtering. The "wide" segment, commonly termed the linear model, is dedicated to memorizing user profiles and their historical preferences. Meanwhile, the "deep" segment employs deep neural networks to enhance generalization for unseen feature combinations by developing low-dimensional dense embeddings associated with sparse features.
 
 In essence, the "wide" component facilitates Collaborative Filtering, capturing user interactions and preferences, while the "deep" counterpart supports Content-Based Filtering, leveraging neural networks to comprehend intricate feature relationships. This dual-pronged strategy adeptly addresses the "Cold Start" challenge often encountered in recommender systems, ensuring effective recommendations even in scenarios with limited user data.
+
+<img src="./images/wide-and-deep-learning-architecture.png" />
 
 ## Architecture
 Wide and Deep learning framework jointly trains feed-forward network with embeddings ( deep learning) and a linear model with feature transformations for generic recommender systems with sparse inputs ( wide learning ).
