@@ -22,7 +22,7 @@ We will use the insight gained from EDA to clean up the data, transform features
 Common problem faced by Recommender Systems is “Cold-Start”, i.e. when we have insufficient data to make recommendation to user. To resolve this, we will be using Wide and Deep Learning Recommender System.
 
 #### Recommender systems are broadly implemented in two ways:
-<img align="right" src="./images/filtering-infographics.png" width="48"/>
+<img align="right" src="./images/filtering-infographics.png" width="500"/>
 
 ### Collaborative Filtering :
 It makes recommendation based on user 	activity and its relation to activity of other users. 	That is it makes recommendation based on user 	similarity and association.  
