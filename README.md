@@ -22,7 +22,7 @@ We will use the insight gained from EDA to clean up the data, transform features
 Common problem faced by Recommender Systems is “Cold-Start”, i.e. when we have insufficient data to make recommendation to user. To resolve this, we will be using Wide and Deep Learning Recommender System.
 
 #### Recommender systems are broadly implemented in two ways:
-<img align="right" src="./images/filtering-infographics.png" />
+<img align="right" src="./images/filtering-infographics.png" width="48"/>
 
 ### Collaborative Filtering :
 It makes recommendation based on user 	activity and its relation to activity of other users. 	That is it makes recommendation based on user 	similarity and association.  
@@ -93,13 +93,13 @@ Given the incorporation of Neural Networks, our model is inherently multi-modal,
 
 
 # References
-1. [Wide and Deep Learning Paper]()
-2. Current research in Deep recommendation systems
-3. Building Deep Recommendation Systems
-4. Collaborative Filtering
-5. Various implementations of Collaborative Filtering
-6. Matrix Factorization and its application in Collaborative Filtering
-7. Application of AI in recommender systems
+1. [Wide and Deep Learning Paper](https://arxiv.org/pdf/1606.07792.pdf)
+2. [Current research in Deep recommendation systems](https://arxiv.org/pdf/1606.07792.pdf)
+3. [Building Deep Recommendation Systems](https://developer.nvidia.com/blog/how-to-build-a-winning-recommendation-system-part-2-deep-learning-for-recommender-systems/)
+4. [Collaborative Filtering](https://www.analyticsvidhya.com/blog/2022/02/introduction-to-collaborative-filtering/)
+5. [Various implementations of Collaborative Filtering](https://towardsdatascience.com/various-implementations-of-collaborative-filtering-100385c6dfe0)
+6. [Matrix Factorization and its application in Collaborative Filtering](https://towardsdatascience.com/understanding-the-scaling-of-l%C2%B2-regularization-in-the-context-of-neural-networks-e3d25f8b50db)
+7. [Application of AI in recommender systems](https://theaisummer.com/recommendation-systems/#wide-and-deep-learning)
 
 
 
