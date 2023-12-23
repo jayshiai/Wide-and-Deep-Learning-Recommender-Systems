@@ -42,37 +42,58 @@ Wide and Deep learning framework jointly trains feed-forward network with embedd
 
 ## Working
 ### The Wide Component:
-It is generalized linear model in form
-Where y is prediction, x is vector of features, W is vector of learned parameters and b is bias.
+It is generalized linear model in form:
+
+  $` y = W_{wide}^T * x + b `$
+
+Where `y` is prediction, `x` is vector of features, `W` is vector of learned parameters and `b` is bias.
 
 ### The Deep Component:
 It is feed-forward network, where each hidden layer performs following computation:
-l  is layer number, f  is the activation function , al  is vector of activation for l-th layer , bl  is vector of biases for l-th layer and w  is the weight vector for deep learning 
+
+  $` a_{l+1} = f( W_{deep}^T * a_l + b_l )`$
+  
+`l`  is layer number, `f`  is the activation function , $`a_l`$  is vector of activation for l-th layer , $`b_l`$  is vector of biases for l-th layer and `W`  is the weight vector for deep learning 
 
 ### Final Model: 
 It is attained by combining wide and deep component
-where Y is the binary class label, Wwide is the vector of all wide model weights, Wdeep is the vector of weights applied on the final activation alast, and b is the bias term. 
+
+  $` P( Y = 1|X ) = sigmoid( W_{wide}^T  * x + W_{deep}^T * a_{last} + b )`$
+  
+where `Y` is the binary class label, $`W_{wide}`$ is the vector of all wide model weights, $`W_{deep}`$ is the vector of weights applied on the final activation $`a_{last}`$, and `b` is the bias term. 
 
 #### Sigmoid Function:
+$` g(z) = \dfrac{1}{1+e^-z}`$    where   $`0 < g(z) < 1`$
 
 
 ## Training
 We will train the model using the data collected / logged during User  Interaction with the Interface.
 
 ## Evalutaion
-We will use AUC ( Area Under Receiver Operator Characteristic Curve ) since we are “classifying” the recommendation as relevant or not. 
+We will use ***AUC ( Area Under Receiver Operator Characteristic Curve )*** since we are “classifying” the recommendation as relevant or not. 
 
 ## Real-Time Inference and Updates
+
+<img align="right" src="./images/inference-diagram.png" />
+
 The Real-Time User Activity Data collected through our script will be used as input to Infer a prediction / recommendation from our model.
 
 After sufficient new data is collected, it will be used to retrain the model for assimilation of real-time data. However, retraining from scratch every time is computationally expensive and delays the time from data arrival to serving an updated model. To tackle this challenge, we implement a warm-starting system which initializes a new model with the embeddings and the linear model weights from the previous model thus saving us time of training model from scratch.
 
+<br/> 
 
 ## Generalized Model and High Transferability
+
+<img align="left" src="./images/model-training-diagram.png" />
+
 Given the incorporation of Neural Networks, our model is inherently multi-modal, allowing for broad generalization across diverse data types. When appropriately managed, the model seamlessly accommodates various media formats, including text, images, audio, and more. This versatility not only positions the model for providing recommendations on interface navigation but also extends its applicability to diverse data forms. Consequently, our model demonstrates a high degree of transferability, making it well-suited for adaptation and implementation in other fields.
 
+<br/>
+
+
+
 # References
-1. Wide and Deep Learning Paper
+1. [Wide and Deep Learning Paper]()
 2. Current research in Deep recommendation systems
 3. Building Deep Recommendation Systems
 4. Collaborative Filtering
